@@ -21,6 +21,7 @@ jobs:
         run: |
           python --version
           pip install dvc==2.10.2
+          pip install fsspec==2022.11.0
           pip install dvc[gs]
           pip install -r requirement_test.txt
       - name: Test API
