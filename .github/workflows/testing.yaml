@@ -8,6 +8,10 @@ jobs:
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v2
+      - name: Configurando python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.7.16'
       - name: Creating and activate virtualenv
         run: |
           pip3 install virtualenv
