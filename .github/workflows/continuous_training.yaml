@@ -37,11 +37,11 @@ jobs:
           dvc add model/model.pkl -r model-track --to-remote
           dvc push model/model.pkl.dvc -r model-track
       - name: Commit .dvc file changes
-          run: |
-            git config --local user.email "kevinsteven1128@gmail.com"
-            git config --local user.name "Kevin Garcia"
-            git add model/model.pkl.dvc
-            git commit -m "Updating model serialization"
+        run: |
+          git config --local user.email "kevinsteven1128@gmail.com"
+          git config --local user.name "Kevin Garcia"
+          git add model/model.pkl.dvc
+          git commit -m "Updating model serialization"
       - uses: ad-m/github-push-action@master
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
