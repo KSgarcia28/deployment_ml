@@ -5,12 +5,12 @@ on:
       - workflow_continuous_training
   schedule:
     - cron: '0 */6 * * *' 
-    workflow_dispatch:
-      inputs:
-        reason:
-          description: Why to run this?
-          required: false
-          default: running CT
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: Why to run this?
+        required: false
+        default: running CT
 jobs:
   continuous-training:
     runs-on: ubuntu-latest
